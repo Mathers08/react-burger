@@ -1,0 +1,31 @@
+@import './src/App';
+
+.reviews {
+  .box-container {
+    @include grid(31rem);
+    .box {
+      text-align: center;
+      padding: 2rem;
+      img {
+        border-radius: 50%;
+        height: 10rem;
+        width: 10rem;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        @include title-text(2rem);
+      }
+      p {
+        @include grap-text(1.4rem);
+        padding: 1rem 0;
+      }
+      .stars {
+        padding-top: .5rem;
+        .icon {
+          font-size: 1.7rem;
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
