@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from '../../assets/images/logo.png';
-import {faBars, faSearch, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faSearch, faShoppingCart, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './Header.scss';
 
 const Header = () => {
+  const [visibleSearch, setVisibleSearch] = useState(false);
+  const toggleVisibleSearch = () => {
+    setVisibleSearch(!visibleSearch);
+  }
+
   return (
     <header className='header'>
       <FontAwesomeIcon id='menu-btn' className='icons' icon={faBars}/>
-      <FontAwesomeIcon id='search-btn' className='icons' icon={faSearch}/>
+      <div onClick={toggleVisibleSearch}>
+        <FontAwesomeIcon id='search-btn' className='icons' icon={visibleSearch ? faTimes : faSearch}/>
+      </div>
 
       <nav className="nav">
         <a href="#home">Home</a>
@@ -23,10 +30,12 @@ const Header = () => {
       <a href="#"><FontAwesomeIcon className='icons' icon={faShoppingCart}/></a>
       <a href="#home" className='logo'><img src={logo} alt=""/></a>
 
-      <form action="" className="search-form">
-        <input type="search" placeholder='Search here...' id='search-box'/>
-        <label htmlFor="search-box"><FontAwesomeIcon className='icons' icon={faSearch}/></label>
-      </form>
+      {visibleSearch &&
+        <form action="" className="search-form">
+          <input type="search" placeholder='Search here...' id='search-box'/>
+          <label htmlFor="search-box"><FontAwesomeIcon className='icons' icon={faSearch}/></label>
+        </form>
+      }
 
     </header>
   );
