@@ -8,32 +8,59 @@
 
   .image {
     flex: 1 1 40rem;
+
     img {
       width: 100%;
     }
   }
+
+
   .content {
     flex: 1 1 40rem;
-    .title {
-      @include title-text(2.5rem);
-    }
-    p {
-      @include grap-text(1.5rem);
-      padding: 2rem 0;
-    }
-    .icons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      margin-top: 1rem;
-      h3 {
-        flex: 1 1 16rem;
-        @include title-text(1.5rem);
-        .icon {
-          padding-right: .5rem;
-          color: $yellow;
+
+    .front {
+
+      .title {
+        @include title-text(2.5rem);
+      }
+
+      p {
+        @include grap-text(1.5rem);
+        padding: 2rem 0;
+      }
+
+      .icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+
+        h3 {
+          flex: 1 1 16rem;
+          @include title-text(1.5rem);
+
+          .icon {
+            padding-right: .5rem;
+            color: $yellow;
+          }
         }
+      }
+    }
+
+    .back {
+      @include grap-text(1.5rem);
+      background-color: $black;
+      padding: 2.5rem;
+      height: 50rem;
+      overflow: auto;
+      border-radius: 8%;
+
+      .title {
+        @include title-text(2rem);
+      }
+      p {
+        padding: 1rem 0;
       }
     }
   }
