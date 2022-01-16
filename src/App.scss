@@ -76,10 +76,9 @@ body {
   background: no-repeat;
   font-size: 1.7rem;
   padding: 1rem 3rem;
-
   &:hover {
-    color: $black;
-
+    color: $yellow;
+    border-color: $yellow;
   }
 }
 

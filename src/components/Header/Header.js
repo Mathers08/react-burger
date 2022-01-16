@@ -1,34 +1,32 @@
 import React, {useState} from 'react';
 import logo from '../../assets/images/logo.png';
-import {faBars, faSearch, faShoppingCart, faTimes} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faHeart, faSearch, faShoppingCart, faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './Header.scss';
 
 const Header = () => {
   const [visibleSearch, setVisibleSearch] = useState(false);
-  const toggleVisibleSearch = () => {
-    setVisibleSearch(!visibleSearch);
-  }
+  const toggleVisibleSearch = () => setVisibleSearch(!visibleSearch);
+  const navItems = ['home', 'menu', 'about', 'reviews', 'contact', 'blogs'];
+  const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
   return (
     <header className='header'>
-      <FontAwesomeIcon id='menu-btn' className='icons' icon={faBars}/>
-      <div onClick={toggleVisibleSearch}>
-        <FontAwesomeIcon id='search-btn' className='icons' icon={visibleSearch ? faTimes : faSearch}/>
-      </div>
+      <a href="#home" className='logo'><img src={logo} alt=""/></a>
 
       <nav className="nav">
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <span className="space"/>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-        <a href="#blogs">Blogs</a>
+        {navItems.map(nav => (
+          <a href={'#' + nav}>{capitalizeFirstLetter(nav)}</a>
+        ))}
       </nav>
 
-      <a href="#"><FontAwesomeIcon className='icons' icon={faShoppingCart}/></a>
-      <a href="#home" className='logo'><img src={logo} alt=""/></a>
+      <div className='btnBlock'>
+        <FontAwesomeIcon className='icons' icon={visibleSearch ? faTimesCircle : faSearch} onClick={toggleVisibleSearch} id='search-btn'/>
+        <FontAwesomeIcon className='icons' icon={faHeart}/>
+        <FontAwesomeIcon className='icons' icon={faShoppingCart}/>
+        <FontAwesomeIcon className='icons' icon={faBars} id='menu-btn'/>
+      </div>
+
 
       {visibleSearch &&
         <form action="" className="search-form">

@@ -1,12 +1,11 @@
 import {useEffect} from "react";
-import AOS from 'aos';
 import './App.scss';
+import AOS from 'aos';
 import "aos/dist/aos.css";
 import {Footer, Header, Service} from "./components";
 import {About, Blogs, Contact, Home, Menu, Reviews} from "./pages";
 
 const App = () => {
-
   useEffect(() => {
     AOS.init({
       duration: 800

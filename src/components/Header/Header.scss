@@ -43,11 +43,12 @@
       width: 16rem;
     }
   }
+  .btnBlock {
+    display: flex;
+    justify-content: space-between;
+    width: 13rem;
+  }
   .logo {
-    position: absolute;
-    top: 3rem;
-    left: 48.5%;
-    transform: translateX(-48%);
     img {
       width: 15rem;
     }
@@ -85,12 +86,8 @@
 }
 @media (max-width: 991px) {
   .header {
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 2rem;
-    .logo {
-      transform: translateX(0);
-      left: 0;
-    }
     #menu-btn {
       display: inline-block;
     }
@@ -111,6 +108,9 @@
       .space {
         display: none;
       }
+    }
+    .btnBlock {
+      width: 16rem;
     }
   }
 }
