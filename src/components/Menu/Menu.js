@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar, faStarHalfAlt} from "@fortawesome/free-solid-svg-icons";
+import {faHeart, faShoppingCart, faStar, faStarHalfAlt} from "@fortawesome/free-solid-svg-icons";
 import './Menu.scss';
 import titleImage from "../../assets/images/title-img.png";
 import axios from "axios";
@@ -37,8 +37,14 @@ const Menu = () => {
               <h3>{item.title}</h3>
               <div className="price">{item.price}</div>
               <div className='btnBlock'>
-                <a href="#" className='btn'>Add to favorites</a>
-                <a href="#" className='btn'>Add to cart</a>
+                <a href="#" className='btn btnInner'>
+                  <p>Add to favorites</p>
+                  <FontAwesomeIcon className='icons' icon={faHeart}/>
+                </a>
+                <a href="#" className='btn btnInner'>
+                  <p>Add to cart</p>
+                  <FontAwesomeIcon className='icons' icon={faShoppingCart}/>
+                </a>
               </div>
             </div>
           </div>

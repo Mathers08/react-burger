@@ -50,6 +50,11 @@
           flex-direction: column;
           max-width: 31rem;
           margin: 0 auto;
+          .btnInner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
         }
       }
     }

@@ -3,7 +3,7 @@ import React from 'react';
 const Favorites = () => {
   return (
     <div>
-      <h3>Favorites</h3>
+      <h1 style={{padding: '100px'}}>Favorites</h1>
     </div>
   );
 };
