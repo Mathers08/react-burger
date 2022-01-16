@@ -3,20 +3,29 @@
 .blogs {
   .box-container {
     @include grid(31rem);
+
+    input {
+      display: none;
+    }
+
     .box {
-      position: relative;
-      &:hover .image {
-        img {
-          transform: scale(1.1);
-        }
-        .icons {
-          transform: translateY(0);
-        }
-      }
+      text-align: center;
+
       .image {
         height: 25rem;
         overflow: hidden;
         position: relative;
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+
+          .icons {
+            transform: translateY(0);
+          }
+        }
+
         .icons {
           display: flex;
           align-items: center;
@@ -29,35 +38,58 @@
           right: 0;
           z-index: 10;
           transform: translateY(10rem);
+
           a {
             font-size: 1.5rem;
             color: $white;
+
             .icon {
               padding-right: .5rem;
               color: $yellow;
+
               &:hover {
                 color: $yellow;
               }
             }
           }
         }
+
         img {
           height: 100%;
           width: 100%;
           object-fit: cover;
         }
       }
+
       .content {
         text-align: center;
-        padding: 2rem;
+        padding: 1rem 2rem;
+
         h3 {
           @include title-text(2rem);
         }
+
         p {
           @include grap-text(1.5rem);
-          padding: 1.5rem 0;
+          padding-top: 1.5rem;
         }
       }
+    }
+
+    .back {
+      @include grap-text(1.5rem);
+      background-color: $black;
+      padding: 2.5rem;
+      height: 45rem;
+      overflow: auto;
+      border-radius: 8%;
+      h3 {
+        @include title-text(2rem);
+      }
+    }
+
+    a {
+      margin: 0;
     }
   }
 }

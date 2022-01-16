@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "blog/blog-1.jpg",
+    "date": "21 May 2021",
+    "createdBy": "by Dave",
+    "dataAosDelay": "150",
+    "title": "Blog title goes here",
+    "infoFront": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, sunt?",
+    "infoBack": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ex illo iste labore, laudantium libero molestiae nisi pariatur quia quibusdam reprehenderit totam. Earum et ipsam iure minima minus qui, saepe sed sequi veritatis. Adipisci dicta distinctio error et explicabo fugiat inventore iure nemo, placeat praesentium quasi, qui, quod vel. Consequuntur eius hic ipsum neque nobis, quis rem suscipit voluptates? Recusandae!"
+  },
+  {
+    "id": 2,
+    "imageUrl": "blog/blog-2.jpg",
+    "date": "14 April 2021",
+    "createdBy": "by James",
+    "dataAosDelay": "300",
+    "title": "Blog title goes here",
+    "infoFront": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, sunt?",
+    "infoBack": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque delectus deleniti exercitationem ipsum minus nostrum pariatur, praesentium quasi, tenetur totam veniam. A asperiores consequatur cumque dolores excepturi fugiat itaque, laboriosam, libero natus nemo non obcaecati officia officiis optio pariatur quas quos ratione recusandae repellat repudiandae saepe sint sit tempore ullam vitae. Dolores est hic mollitia obcaecati quae, sapiente tempora velit voluptatum! Ab assumenda error esse, inventore perspiciatis voluptatibus! Aliquam animi aperiam autem, blanditiis consequatur deserunt doloremque est fugiat impedit iusto laudantium molestias nihil placeat, quas quidem reprehenderit sequi! Deleniti dolorem dolores quas quod, sequi tempora voluptatibus? Blanditiis culpa, esse eveniet laborum nihil quidem ut! A ad delectus dolorum eum, facilis incidunt maiores natus perspiciatis quia recusandae repellendus vitae voluptate?"
+  },
+  {
+    "id": 3,
+    "imageUrl": "blog/blog-3.jpg",
+    "date": "20 December 2021",
+    "createdBy": "by Anna",
+    "dataAosDelay": "450",
+    "title": "Blog title goes here",
+    "infoFront": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, sunt?",
+    "infoBack": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet assumenda atque autem beatae blanditiis culpa cum cupiditate distinctio esse est ex illo illum ipsa itaque laboriosam laborum laudantium libero molestiae mollitia nisi officiis omnis provident quae quaerat."
+  }
+]
