@@ -1,8 +1,8 @@
 import React from 'react';
 import burgerBanner from "../../assets/images/burger-baner.png";
-import './Home.scss';
+import './Main.scss';
 
-const Home = () => {
+const Main = () => {
   return (
     <section className='home' id='home'>
       <div className="content">
@@ -15,4 +15,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Main;

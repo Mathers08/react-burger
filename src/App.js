@@ -2,8 +2,9 @@ import {useEffect} from "react";
 import './App.scss';
 import AOS from 'aos';
 import "aos/dist/aos.css";
-import {Footer, Header, Service} from "./components";
-import {About, Blogs, Contact, Home, Menu, Reviews} from "./pages";
+import {Route, Routes} from "react-router-dom";
+import {Favorites, Home, Orders} from "./pages";
+import {Header} from "./components";
 
 const App = () => {
   useEffect(() => {
@@ -15,14 +16,11 @@ const App = () => {
   return (
     <div>
       <Header/>
-      <Home/>
-      <Service/>
-      <Menu/>
-      <About/>
-      <Reviews/>
-      <Contact/>
-      <Blogs/>
-      <Footer/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/favorites' element={<Favorites/>}/>
+        <Route path='/orders' element={<Orders/>}/>
+      </Routes>
     </div>
   );
 }

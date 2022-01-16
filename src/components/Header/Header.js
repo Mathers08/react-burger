@@ -3,6 +3,7 @@ import logo from '../../assets/images/logo.png';
 import {faBars, faHeart, faSearch, faShoppingCart, faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './Header.scss';
+import {Link} from "react-router-dom";
 
 const Header = () => {
   const [visibleSearch, setVisibleSearch] = useState(false);
@@ -12,7 +13,9 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <a href="#home" className='logo'><img src={logo} alt=""/></a>
+      <Link to='/'>
+        <div className='logo'><img src={logo} alt=""/></div>
+      </Link>
 
       <nav className="nav">
         {navItems.map(nav => (
@@ -22,8 +25,12 @@ const Header = () => {
 
       <div className='btnBlock'>
         <FontAwesomeIcon className='icons' icon={visibleSearch ? faTimesCircle : faSearch} onClick={toggleVisibleSearch} id='search-btn'/>
-        <FontAwesomeIcon className='icons' icon={faHeart}/>
-        <FontAwesomeIcon className='icons' icon={faShoppingCart}/>
+        <Link to='/favorites'>
+          <FontAwesomeIcon className='icons' icon={faHeart}/>
+        </Link>
+        <Link to='/orders'>
+          <FontAwesomeIcon className='icons' icon={faShoppingCart}/>
+        </Link>
         <FontAwesomeIcon className='icons' icon={faBars} id='menu-btn'/>
       </div>
 

@@ -36,11 +36,11 @@ const Contact = () => {
             </div>
           </div>
           <form action="">
-            <input data-aos='fade-up' data-aos-delay='150' type="text" placeholder='full name' className='box'/>
-            <input data-aos='fade-up' data-aos-delay='300' type="email" placeholder='email' className='box'/>
-            <input data-aos='fade-up' data-aos-delay='450' type="number" placeholder='phone' className='box'/>
-            <textarea data-aos='fade-up' data-aos-delay='600' name="" placeholder='message' id="" cols="30" rows="10" className='box'/>
-            <input data-aos='fade-up' data-aos-delay='750' type="submit" value='send message' className='btn'/>
+            <input type="text" placeholder='Full Name' className='box'/>
+            <input type="email" placeholder='Email' className='box'/>
+            <input type="number" placeholder='Phone' className='box'/>
+            <textarea name="" placeholder='Message' id="" cols="30" rows="10" className='box'/>
+            <input type="submit" value='Send Message' className='btn'/>
           </form>
         </div>
       </div>
