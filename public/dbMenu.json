@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "menu/product-1.png",
+    "price": "$10.99",
+    "title": "Cheese hamburger",
+    "dataAosDelay": "150"
+  },
+  {
+    "id": 2,
+    "imageUrl": "menu/product-2.png",
+    "price": "$8.59",
+    "title": "Cheese hamburger",
+    "dataAosDelay": "300"
+  },
+  {
+    "id": 3,
+    "imageUrl": "menu/product-3.png",
+    "price": "$11.99",
+    "title": "Cheese hamburger",
+    "dataAosDelay": "450"
+  },
+  {
+    "id": 4,
+    "imageUrl": "menu/product-4.png",
+    "price": "$7.99",
+    "title": "Cheese hamburger",
+    "dataAosDelay": "600"
+  },
+  {
+    "id": 5,
+    "imageUrl": "menu/product-5.png",
+    "price": "$13.99",
+    "title": "Cheese hamburger",
+    "dataAosDelay": "750"
+  },
+  {
+    "id": 6,
+    "imageUrl": "menu/product-6.png",
+    "price": "$8.99",
+    "title": "Cheese hamburger",
+    "dataAosDelay": "900"
+  }
+]

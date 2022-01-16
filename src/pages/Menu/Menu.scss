@@ -45,6 +45,12 @@
         .price {
           @include grap-text(2rem);
         }
+        .btnBlock {
+          display: flex;
+          flex-direction: column;
+          max-width: 31rem;
+          margin: 0 auto;
+        }
       }
     }
   }
