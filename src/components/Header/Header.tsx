@@ -3,9 +3,11 @@ import logo from '../../assets/images/logo.png';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './Header.scss';
 import {Link} from "react-router-dom";
-import {barsIcon, searchIcon, timesCircleIcon} from "../../consts/typedIcons";
+import {barsIcon, heartIcon, searchIcon, shoppingCartIcon, timesCircleIcon, userIcon} from "../../consts/typedIcons";
+import {useTypedSelector} from "../../hooks";
 
 const Header = () => {
+  const {isAuth} = useTypedSelector(state => state.auth)
   const [visibleSearch, setVisibleSearch] = useState<boolean>(false);
   const toggleVisibleSearch = () => setVisibleSearch(!visibleSearch);
   const navItems = ['home', 'menu', 'about', 'reviews', 'contact', 'blogs'];
@@ -26,21 +28,28 @@ const Header = () => {
       <div className='btnBlock'>
         <FontAwesomeIcon className='icons' icon={visibleSearch ? timesCircleIcon : searchIcon}
                          onClick={toggleVisibleSearch} id='search-btn'/>
-        {/*<Link to='/favorites'>
-          <FontAwesomeIcon className='icons' icon={heartIcon}/>
-        </Link>
-        <Link to='/orders'>
-          <FontAwesomeIcon className='icons' icon={shoppingCartIcon}/>
-        </Link>
-        <Link to='/user'>
-          <FontAwesomeIcon className='icons' icon={userIcon}/>
-        </Link>*/}
-        <Link to='/login'>
-          <a className='btn'>Sign in</a>
-        </Link>
-        <Link to='/signup'>
-          <a className='btn'>Sign up</a>
-        </Link>
+        {isAuth ?
+          <>
+            <Link to='/favorites'>
+              <FontAwesomeIcon className='icons' icon={heartIcon}/>
+            </Link>
+            <Link to='/orders'>
+              <FontAwesomeIcon className='icons' icon={shoppingCartIcon}/>
+            </Link>
+            <Link to='/user'>
+              <FontAwesomeIcon className='icons' icon={userIcon}/>
+            </Link>
+          </>
+          :
+          <>
+            <Link to='/login'>
+              <a className='btn'>Sign in</a>
+            </Link>
+            <Link to='/signup'>
+              <a className='btn'>Sign up</a>
+            </Link>
+          </>
+        }
         <FontAwesomeIcon className='icons' icon={barsIcon} id='menu-btn'/>
       </div>
 
