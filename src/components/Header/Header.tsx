@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './Header.scss';
 import {Link} from "react-router-dom";
 import {barsIcon, heartIcon, searchIcon, shoppingCartIcon, timesCircleIcon, userIcon} from "../../consts/typedIcons";
-import {useTypedSelector} from "../../hooks";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 const Header = () => {
   const {isAuth} = useTypedSelector(state => state.auth)
@@ -16,7 +16,9 @@ const Header = () => {
   return (
     <header className='header'>
       <Link to='/'>
-        <div className='logo'><img src={logo} alt=""/></div>
+        <div className='logo'>
+          <img src={logo} alt=""/>
+        </div>
       </Link>
 
       <nav className="nav">
@@ -25,7 +27,7 @@ const Header = () => {
         ))}
       </nav>
 
-      <div className='btnBlock'>
+      <div className='btnBlock' style={isAuth ? {width: '20rem'} : {width: '30rem'}}>
         <FontAwesomeIcon className='icons' icon={visibleSearch ? timesCircleIcon : searchIcon}
                          onClick={toggleVisibleSearch} id='search-btn'/>
         {isAuth ?
@@ -43,10 +45,10 @@ const Header = () => {
           :
           <>
             <Link to='/login'>
-              <a className='btn'>Sign in</a>
+              <button className='btn'>Sign in</button>
             </Link>
             <Link to='/signup'>
-              <a className='btn'>Sign up</a>
+              <button className='btn'>Sign up</button>
             </Link>
           </>
         }

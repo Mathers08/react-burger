@@ -5,7 +5,7 @@ import {
   faEnvelope,
   faHamburger,
   faHeadset,
-  faHeart,
+  faHeart, faLock,
   faMap,
   faPhone,
   faSearch,
@@ -34,3 +34,4 @@ export const starHalfAltIcon = faStarHalfAlt as IconProp;
 export const hamburgerIcon = faHamburger as IconProp;
 export const shippingFastIcon = faShippingFast as IconProp;
 export const headsetIcon = faHeadset as IconProp;
+export const lockIcon = faLock as IconProp;
