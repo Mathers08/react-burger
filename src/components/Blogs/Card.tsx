@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import './Blogs.scss';
 import ReactCardFlip from "react-card-flip";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCalendar, faUser} from "@fortawesome/free-solid-svg-icons";
+import {calendarIcon, userIcon} from "../../consts/typedIcons";
+import {ICard} from "../../types/ICard";
 
-const Card = ({imageUrl, dataAosDelay, date, createdBy, title, infoFront, infoBack}) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+const Card = ({imageUrl, dataAosDelay, date, createdBy, title, infoFront, infoBack}: ICard) => {
+  const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const toggleIsFlipped = () => setIsFlipped(!isFlipped);
 
   return (
@@ -15,8 +16,8 @@ const Card = ({imageUrl, dataAosDelay, date, createdBy, title, infoFront, infoBa
           <div className="image">
             <img src={imageUrl} alt=""/>
             <div className="icons">
-              <a href="#"><FontAwesomeIcon className='icon' icon={faCalendar}/>{date}</a>
-              <a href="#"><FontAwesomeIcon className='icon' icon={faUser}/>{createdBy}</a>
+              <a href="#"><FontAwesomeIcon className='icon' icon={calendarIcon}/>{date}</a>
+              <a href="#"><FontAwesomeIcon className='icon' icon={userIcon}/>{createdBy}</a>
             </div>
           </div>
           <div className="content">

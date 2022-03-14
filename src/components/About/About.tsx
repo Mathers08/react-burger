@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import ReactCardFlip from "react-card-flip";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import aboutImage from '../../assets/images/about-img.png';
-import {faCheck} from "@fortawesome/free-solid-svg-icons";
 import './About.scss';
+import {checkIcon} from "../../consts/typedIcons";
 
 const About = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const toggleFlipped = () => setIsFlipped(!isFlipped);
   const headers = ['Best price', 'Best service', 'Fresh ingredient', 'Backed buns', 'Natural cheese', 'Veg & non-veg'];
 
@@ -24,7 +24,7 @@ const About = () => {
               reprehenderit rerum sapiente soluta ullam voluptate.</p>
             <div className="icons">
               {headers.map(header => (
-                <h3><FontAwesomeIcon className="icon" icon={faCheck}/>{header}</h3>
+                <h3><FontAwesomeIcon className="icon" icon={checkIcon}/>{header}</h3>
               ))}
             </div>
             <button onClick={toggleFlipped} className='btn'>Read more</button>

@@ -4,6 +4,7 @@ import './Blogs.scss';
 import axios from "axios";
 import Card from "./Card";
 
+// @ts-ignore
 function createEntry(props) {
   return <Card key={props.id} {...props} />
 }

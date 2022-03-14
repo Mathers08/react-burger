@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import titleImage from '../../assets/images/title-img.png';
-import {faStar, faStarHalfAlt} from "@fortawesome/free-solid-svg-icons";
 import './Reviews.scss';
 import axios from "axios";
+import {starHalfAltIcon, starIcon} from "../../consts/typedIcons";
+import {IReview} from "../../types/IReview";
 
 const Reviews = () => {
   const [items, setItems] = useState([]);
@@ -20,17 +21,17 @@ const Reviews = () => {
         <h3>Testimonial</h3>
       </div>
       <div className="box-container">
-        {items.map(item => (
-          <div key={item.id} className="box" data-aos='fade-up' data-aos-delay={item.dataAosDelay}>
-            <img src={item.imageUrl} alt=""/>
-            <h3>{item.fullName}</h3>
-            <p>{item.description}</p>
+        {items.map(({id, imageUrl, fullName, dataAosDelay, description}: IReview) => (
+          <div key={id} className="box" data-aos='fade-up' data-aos-delay={dataAosDelay}>
+            <img src={imageUrl} alt=""/>
+            <h3>{fullName}</h3>
+            <p>{description}</p>
             <div className="stars">
-              <FontAwesomeIcon className='icon' icon={faStar}/>
-              <FontAwesomeIcon className='icon' icon={faStar}/>
-              <FontAwesomeIcon className='icon' icon={faStar}/>
-              <FontAwesomeIcon className='icon' icon={faStar}/>
-              <FontAwesomeIcon className='icon' icon={faStarHalfAlt}/>
+              <FontAwesomeIcon className='icon' icon={starIcon}/>
+              <FontAwesomeIcon className='icon' icon={starIcon}/>
+              <FontAwesomeIcon className='icon' icon={starIcon}/>
+              <FontAwesomeIcon className='icon' icon={starIcon}/>
+              <FontAwesomeIcon className='icon' icon={starHalfAltIcon}/>
             </div>
           </div>
         ))}
